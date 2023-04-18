@@ -6,7 +6,7 @@ import { Container, Label, InputText } from './styles';
 export type InputProps = TextInputProps & {
   label?: string;
   value?: string;
-}
+};
 
 export function Input({ label, value, ...rest }: InputProps) {
   return (
@@ -18,4 +18,4 @@ export function Input({ label, value, ...rest }: InputProps) {
       />
     </Container>
   );
-}
+};

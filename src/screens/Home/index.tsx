@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import { Container, Content } from './styles'
+import { Container, Content } from './styles';
 
-import List from '../../components/List'
-import Form from '../../components/Form'
+import List from '../../components/List';
+import Form from '../../components/Form';
 
 export default function Home() {
   const [results, setResults] = useState([]);
@@ -17,11 +17,11 @@ export default function Home() {
       let count = textArray.filter((w) => w == word).length;
 
       if (!newResult.find((resul) => resul.word == word)) {
-        newResult.push({count, word})
-      }
-    })
+        newResult.push({ count, word });
+      };
+    });
 
-    setResults(newResult)
+    setResults(newResult);
   }
 
   function onCloseList() {
@@ -34,9 +34,9 @@ export default function Home() {
         {results.length > 0 ? (
           <List list={results} onClose={onCloseList} />
         ) : (
-          <Form onSubmit={onSubmit}/>
+          <Form onSubmit={onSubmit} />
         )}
       </Content>
     </Container>
-  )
-}
+  );
+};

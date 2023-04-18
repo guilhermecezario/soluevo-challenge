@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { TextInputProps, TouchableOpacityProps } from 'react-native';
+import { TouchableOpacityProps } from 'react-native';
 import { Container, Text } from './styles';
 
-export type InputProps = TouchableOpacityProps & {
+export type ButtonProps = TouchableOpacityProps & {
   text?: string;
-}
+};
 
-export function Button({ text, ...rest }: InputProps) {
+export function Button({ text, ...rest }: ButtonProps) {
   return (
     <Container {...rest}>
       <Text>{text}</Text>
     </Container>
   );
-}
+};

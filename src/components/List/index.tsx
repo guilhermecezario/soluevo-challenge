@@ -1,19 +1,19 @@
-import React from 'react'
-import { Text } from 'react-native'
+import React from 'react';
+import { Text } from 'react-native';
 
-import { Container, Title } from './styles'
+import { Container, Title } from './styles';
 
-import { Button } from '../Button'
+import { Button } from '../Button';
 
 export type ItemList = {
   word: string;
   count: string;
-}
+};
 
 export type ListProps = {
   list?: ItemList[];
   onClose?: () => void;
-}
+};
 
 export default function List({ list, onClose } : ListProps) {
   return (
@@ -26,5 +26,5 @@ export default function List({ list, onClose } : ListProps) {
 
       <Button text='Voltar' onPress={onClose} />
     </Container>
-  )
-}
+  );
+};

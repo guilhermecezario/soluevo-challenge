@@ -1,26 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import { Container } from './styles'
+import { Container } from './styles';
 
-import { Input } from '../Input'
-import { Button } from '../Button'
+import { Input } from '../Input';
+import { Button } from '../Button';
 
 export type FormProps = {
   onSubmit?: (text: string) => void;
-}
+};
 
 export default function Form({onSubmit} : FormProps) {
-  const [text, setText] = useState('O João é o Head da Europa e eu sou o Head do Brasil');
+  const [text, setText] = useState('');
 
   function onChangeText(t: string) {
     setText(t);
-  }
+  };
 
   function onPressButton() {
     if (!text) return;
 
-    onSubmit(text)
-  }
+    onSubmit(text);
+  };
 
   return (
     <Container>
@@ -32,5 +32,5 @@ export default function Form({onSubmit} : FormProps) {
 
       <Button text="OK" onPress={onPressButton} />
     </Container>
-  )
-}
+  );
+};
