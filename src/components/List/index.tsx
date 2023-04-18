@@ -7,12 +7,12 @@ import { Button } from '../Button';
 
 export type ItemList = {
   word: string;
-  count: string;
+  count: number;
 };
 
 export type ListProps = {
-  list?: ItemList[];
-  onClose?: () => void;
+  list: ItemList[];
+  onClose: () => void;
 };
 
 export default function List({ list, onClose } : ListProps) {

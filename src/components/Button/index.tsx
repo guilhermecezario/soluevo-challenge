@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { TouchableOpacityProps } from 'react-native';
 import { Container, Text } from './styles';
 
-export type ButtonProps = TouchableOpacityProps & {
+export type ButtonProps = {
   text?: string;
+  onPress: () => void;
 };
 
-export function Button({ text, ...rest }: ButtonProps) {
+export function Button({ text, onPress }: ButtonProps) {
   return (
-    <Container {...rest}>
+    <Container onPress={onPress}>
       <Text>{text}</Text>
     </Container>
   );

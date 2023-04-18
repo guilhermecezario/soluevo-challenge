@@ -6,7 +6,7 @@ import { Input } from '../Input';
 import { Button } from '../Button';
 
 export type FormProps = {
-  onSubmit?: (text: string) => void;
+  onSubmit: (text: string) => void;
 };
 
 export default function Form({onSubmit} : FormProps) {

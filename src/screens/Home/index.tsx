@@ -5,15 +5,20 @@ import { Container, Content } from './styles';
 import List from '../../components/List';
 import Form from '../../components/Form';
 
+export type IResult = {
+  word: string;
+  count: number;
+};
+
 export default function Home() {
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<IResult[]>([]);
 
   function onSubmit(text: string): void {
     const textArray = text.toLowerCase().split(' ');
 
-    const newResult = [];
+    const newResult: IResult[] = [];
 
-    text.toLowerCase().split(' ').forEach((word) => {
+    textArray.forEach((word) => {
       let count = textArray.filter((w) => w == word).length;
 
       if (!newResult.find((resul) => resul.word == word)) {
